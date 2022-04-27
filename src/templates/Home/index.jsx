@@ -64,6 +64,7 @@ export class Home extends Component {
 
           <TextInput
             onChange={this.handleIChange}
+            searchValue={searchValue}
           />
         </div>
 
