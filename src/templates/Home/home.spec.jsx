@@ -122,7 +122,7 @@ describe("<Home />", () => {
     render(<Home />);
     const noMorePosts = screen.getByText("Não há posts com a busca solicitada");
 
-    // expect.assertions(2);
+    expect.assertions(2);
 
     await waitForElementToBeRemoved(noMorePosts);
 
