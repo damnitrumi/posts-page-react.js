@@ -109,7 +109,7 @@ describe("<Home />", () => {
       screen.getByRole("heading", { name: "title 1 1" })
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: "title 2 2" })
+      screen.getByRole("heading", { name: "title 2 2" })
     ).toBeInTheDocument();
 
     userEvent.type(search, "post does not exists");
@@ -118,11 +118,11 @@ describe("<Home />", () => {
     ).toBeInTheDocument();
   });
 
-  it("should render search, posts and load more", async () => {
+  it("should load posts", async () => {
     render(<Home />);
     const noMorePosts = screen.getByText("Não há posts com a busca solicitada");
 
-    // expect.assertions(3);
+    expect.assertions(2);
 
     await waitForElementToBeRemoved(noMorePosts);
 
@@ -131,7 +131,7 @@ describe("<Home />", () => {
     userEvent.click(button);
 
     expect(
-      screen.queryByRole("heading", { name: "title 3 3" })
+      screen.getByRole("heading", { name: "title 3 3" })
     ).toBeInTheDocument();
 
     expect(button).toBeDisabled();
