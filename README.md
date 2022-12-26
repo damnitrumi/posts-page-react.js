@@ -4,6 +4,8 @@ As imagens e textos são retornadas de uma API.
 Contém um botão para carregar mais posts e um input para filtrar posts baseado no valor digitado.
 Contém algumas funcionalidades como não mostar o botão para carregar posts enquanto eu estiver fazendo uma pesquisa e desabilitar o botão quando eu chegar no máximo de posts disponíveis na API.
 
+Deploy: https://posts-page-react-js-damnitrumi.vercel.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
